@@ -35,6 +35,36 @@
     display: flex;
     align-items: center;
   }
+
+  .card-img-top {
+  height: 20rem;       /* default height for desktop */
+  object-fit: cover;   /* keep aspect ratio */
+  width: 100%;
+}
+
+@media (max-width: 430px) {
+  .card-img-top {
+    height: 16rem;   /* override for mobile */
+  }
+}
+
+  @media (max-width: 430px) {
+  #filters {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  .filter {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 601px) {
+  .tax-toggle {
+    width: 100%;                /* full width under 430px */
+    margin: 0;                  /* remove left margin */
+    justify-content: center;    /* center inside container */
+  }
+}
 </style>
 
 <div id="filters">
@@ -98,7 +128,6 @@
         src="<%= listing.image.url %>"
         alt="listing_image"
         class="card-img-top"
-        style="height: 20rem"
       />
       <div class="card-img-overlay"></div>
       <div class="card-body">

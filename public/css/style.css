@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
 }
 
-.contaimer {
+.container {
   flex: 1;
 }
 
@@ -129,8 +129,44 @@ footer {
   padding-right: 0;
 }
 
-/* MAP */
-#map {
-  height: 400px;
-  width: 85vh;
+
+.desktop-view {
+  display: block;
 }
+
+.mobile-view {
+  display: none;
+}
+
+#map {
+  width: 85vh;
+  min-height: 200px;
+  height: 400px;
+}
+
+.show-img {
+  height: 40vh;
+}
+
+#map-mobile {
+  height: 250px;
+  min-height: 125px;
+  width: 100%;
+}
+
+/* --- Mobile Styles --- */
+/* On screens 430px or less, hide the desktop view and show the mobile view. */
+@media (max-width: 430px) {
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+
+  .show-img {
+    height: 25vh;
+  }
+}
+

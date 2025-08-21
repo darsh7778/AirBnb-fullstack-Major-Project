@@ -1,0 +1,15 @@
+<div class="desktop-view">
+  <%- include("show", { listing }) %>
+</div>
+
+<div class="mobile-view">
+  <%- include("showmob", { listing }) %>
+</div>
+
+<!-- Shared Mapbox setup -->
+<script>
+  const mapToken = "<%= process.env.MAP_TOKEN %>";
+  const listing = <%- JSON.stringify(listing) %>;
+</script>
+<script src="/js/map.js"></script>
+

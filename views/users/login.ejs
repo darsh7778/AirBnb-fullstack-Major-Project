@@ -1,8 +1,20 @@
 <% layout("layouts/boilerplate") %>
+<style>
+  .mob {
+    margin-bottom: 20px;
+  }
 
+  @media (max-width: 430px) {
+  .mob {
+    width: 83.333333%;   /* col-10 */
+    margin-left: 8.333333%; /* offset-1 */
+    margin-bottom: 1rem;
+  }
+}
+</style>
 <div class="row mt-3">
-  <h2 class="col-6 offset-3">Login</h2>
-  <div class="col-8 offset-3">
+  <h2 class="col-6 offset-2 mob">Login</h2>
+  <div class="col-8 offset-2 mob">
     <form action="/login" method="POST" novalidate class="needs-validation">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
