@@ -194,3 +194,22 @@
   -webkit-transition: background-position .7s;
   transition: background-position .7s;
 }
+
+@media (max-width: 430px) {
+  .starability-slot > label {
+    font-size: 0; /* hide the "1 star", "2 stars"... text */
+    cursor: pointer;
+  }
+
+  .starability-slot > label::before {
+    content: "★";         /* show a star instead */
+    font-size: 2rem;
+    color: grey;          /* default grey */
+    margin-right: 4px;
+  }
+
+  /* When a star is selected → make it gold + all previous stars gold */
+  .starability-slot > input:checked ~ label::before {
+    color: gold;
+  }
+}
