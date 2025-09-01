@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "23.11.0"
+    "node": "23.x"
   },
   "name": "major-project-air-bnb",
   "version": "1.0.0",
